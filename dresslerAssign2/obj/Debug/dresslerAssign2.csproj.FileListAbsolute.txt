@@ -1,0 +1,18 @@
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\bin\Debug\dresslerAssign2.exe.config
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\bin\Debug\dresslerAssign2.exe
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\bin\Debug\dresslerAssign2.pdb
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.csprojResolveAssemblyReference.cache
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.hangmanForm.resources
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.Properties.Resources.resources
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.csproj.GenerateResource.Cache
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.exe
+E:\Semester 2\COMP 60\Assignment 2\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.pdb
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\bin\Debug\dresslerAssign2.exe.config
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.exe
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.pdb
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\bin\Debug\dresslerAssign2.exe
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\bin\Debug\dresslerAssign2.pdb
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.csprojResolveAssemblyReference.cache
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.hangmanForm.resources
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.Properties.Resources.resources
+C:\Users\Kiv\Desktop\dresslerAssign2\dresslerAssign2\obj\Debug\dresslerAssign2.csproj.GenerateResource.Cache
