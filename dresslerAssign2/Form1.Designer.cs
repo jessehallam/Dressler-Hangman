@@ -169,6 +169,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "hangmanForm";
             this.Text = "Hangman";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.hangmanForm_FormClosing);
             this.Load += new System.EventHandler(this.hangmanForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hangmanPictureBox)).EndInit();
             this.ResumeLayout(false);

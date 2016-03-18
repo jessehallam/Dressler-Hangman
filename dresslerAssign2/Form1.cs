@@ -92,6 +92,7 @@ namespace dresslerAssign2
                     {
                         MessageBox.Show("Sorry, you lost.");
                         guessesTB.ReadOnly = true;
+                        lossesTB.Text = (++lossesCtr).ToString();
                     }
                 }
                 // good guess, did the player win?
@@ -101,6 +102,11 @@ namespace dresslerAssign2
                     guessesTB.ReadOnly = true;
                 }
             }
+        }
+
+        private void hangmanForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
 
         // This method takes the target word and replaces characters with '-' if that character
