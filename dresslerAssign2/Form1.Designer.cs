@@ -45,7 +45,7 @@
             // 
             this.hangmanPictureBox.Image = global::dresslerAssign2.Properties.Resources.hangman0;
             this.hangmanPictureBox.Location = new System.Drawing.Point(52, 26);
-            this.hangmanPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hangmanPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.hangmanPictureBox.Name = "hangmanPictureBox";
             this.hangmanPictureBox.Size = new System.Drawing.Size(267, 256);
             this.hangmanPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +68,7 @@
             // 
             this.targetTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.targetTB.Location = new System.Drawing.Point(524, 70);
-            this.targetTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.targetTB.Margin = new System.Windows.Forms.Padding(2);
             this.targetTB.Name = "targetTB";
             this.targetTB.ReadOnly = true;
             this.targetTB.Size = new System.Drawing.Size(209, 30);
@@ -90,8 +90,9 @@
             // 
             this.guessesTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.guessesTB.Location = new System.Drawing.Point(524, 159);
-            this.guessesTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guessesTB.Margin = new System.Windows.Forms.Padding(2);
             this.guessesTB.Name = "guessesTB";
+            this.guessesTB.ReadOnly = true;
             this.guessesTB.Size = new System.Drawing.Size(209, 30);
             this.guessesTB.TabIndex = 4;
             this.guessesTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guessesTB_KeyPress);
@@ -100,7 +101,7 @@
             // 
             this.newGameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.newGameButton.Location = new System.Drawing.Point(148, 320);
-            this.newGameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newGameButton.Margin = new System.Windows.Forms.Padding(2);
             this.newGameButton.Name = "newGameButton";
             this.newGameButton.Size = new System.Drawing.Size(87, 60);
             this.newGameButton.TabIndex = 5;
@@ -123,7 +124,7 @@
             // 
             this.wonTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.wonTB.Location = new System.Drawing.Point(434, 327);
-            this.wonTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wonTB.Margin = new System.Windows.Forms.Padding(2);
             this.wonTB.Name = "wonTB";
             this.wonTB.ReadOnly = true;
             this.wonTB.Size = new System.Drawing.Size(49, 30);
@@ -144,7 +145,7 @@
             // 
             this.lossesTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.lossesTB.Location = new System.Drawing.Point(608, 327);
-            this.lossesTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lossesTB.Margin = new System.Windows.Forms.Padding(2);
             this.lossesTB.Name = "lossesTB";
             this.lossesTB.ReadOnly = true;
             this.lossesTB.Size = new System.Drawing.Size(49, 30);
@@ -165,7 +166,7 @@
             this.Controls.Add(this.targetTB);
             this.Controls.Add(this.targetLabel);
             this.Controls.Add(this.hangmanPictureBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "hangmanForm";
             this.Text = "Hangman";
             this.Load += new System.EventHandler(this.hangmanForm_Load);

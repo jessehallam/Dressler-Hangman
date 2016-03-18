@@ -12,6 +12,9 @@ namespace dresslerAssign2
 {
     public partial class hangmanForm : Form
     {
+        // The maximum number of guesses before the player loses the game.
+        private const int MaxGuesses = 6;
+
         String[] words = { "programming", "network", "website", "linux", "windows", "internet" };
         string targetWord;
         int ctr;
@@ -46,11 +49,12 @@ namespace dresslerAssign2
 
         private void newGameButton_Click(object sender, EventArgs e)
         {
-            //Clearing the screen
+            // Clearing the screen
             targetTB.Clear();
             guessesTB.Clear();
+            hangmanPictureBox.Image = pictures[0];
 
-            //Code that generates a number for the array position to grab the value from
+            // Code that generates a number for the array position to grab the value from
             Random randomNumberGenerator = new Random();
             int randNum = randomNumberGenerator.Next(words.Length); // jhallam: changed Int64 to int
             targetWord = words[randNum];
@@ -60,6 +64,9 @@ namespace dresslerAssign2
 
             // Clear previous guesses
             guesses.Clear();
+
+            // Enable the input box
+            guessesTB.ReadOnly = false;
         }
 
         private void guessesTB_KeyPress(object sender, KeyPressEventArgs e)
@@ -69,67 +76,52 @@ namespace dresslerAssign2
                 char input = e.KeyChar;
                 guesses.Add(input);
 
+                // Get the masked target word.
+                string maskedWord = GetMaskedWord();
+                targetTB.Text = maskedWord;
+
                 // wrong guess
                 if (!targetWord.Contains(input))
                 {
                     // handle the wrong guess
-                }
-                else
-                {
-                    // good guess
-                }
-                
-            }
-        } 
-        /*
-        private void guessesTB_TextChanged(object sender, EventArgs e)
-        {
-            // No user input (maybe a backspace)
-            if (guessesTB.Text.Length == 0)
-                return;
-            
-
-            char input = guessesTB.Text[guessesTB.MaxLength - 1];
-            
-            try
-            {
-
-                char guess = guessesTB.Text[guessesTB.Text.Length - 1];
-
-                string txt = guessesTB.Text;
-
-
-                if (targetWord.Contains(guess))
-                {
-                    MessageBox.Show("Found letter in target word");
-                  
-                    
-                }
-                else
-                {
                     wrongCtr++;
-                    MessageBox.Show("Did not find letter in target word");
+                    hangmanPictureBox.Image = pictures[wrongCtr];
+
+                    // run out of guesses?
+                    if (wrongCtr == MaxGuesses)
+                    {
+                        MessageBox.Show("Sorry, you lost.");
+                        guessesTB.ReadOnly = true;
+                    }
+                }
+                // good guess, did the player win?
+                else if (!maskedWord.Contains('-'))
+                {
+                    MessageBox.Show("Congratulations! You Won!");
+                    guessesTB.ReadOnly = true;
                 }
             }
-            
-            catch (Exception)
+        }
+
+        // This method takes the target word and replaces characters with '-' if that character
+        // hasn't been guessed correctly.
+        private string GetMaskedWord()
+        {
+            string result = "";
+
+            foreach (char c in targetWord)
             {
-                MessageBox.Show("No word has been selected");
+                if (guesses.Contains(c))
+                {
+                    result += c;
+                }
+                else
+                {
+                    result += '-';
+                }
             }
-            hangmanPictureBox.Image = pictures[wrongCtr];
-
-            if (wrongCtr == 6)
-            {
-                lossesCtr++;
-                targetTB.Clear();
-                wrongCtr = 0;
-            }
-
-            string lossesCtrInt = Convert.ToString(lossesCtr);
-            lossesTB.Text = lossesCtrInt;
-        }*/
-
-
+            return result;
+        }
 
         private void hangmanForm_Load(object sender, EventArgs e)
         {
