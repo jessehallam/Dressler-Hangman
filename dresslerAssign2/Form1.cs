@@ -100,6 +100,7 @@ namespace dresslerAssign2
                 {
                     MessageBox.Show("Congratulations! You Won!");
                     guessesTB.ReadOnly = true;
+                    wonTB.Text = (++winsCtr).ToString();
                 }
             }
         }
