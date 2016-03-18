@@ -69,10 +69,19 @@ namespace dresslerAssign2
                 char input = e.KeyChar;
                 guesses.Add(input);
 
-
+                // wrong guess
+                if (!targetWord.Contains(input))
+                {
+                    // handle the wrong guess
+                }
+                else
+                {
+                    // good guess
+                }
+                
             }
         } 
-
+        /*
         private void guessesTB_TextChanged(object sender, EventArgs e)
         {
             // No user input (maybe a backspace)
@@ -81,9 +90,7 @@ namespace dresslerAssign2
             
 
             char input = guessesTB.Text[guessesTB.MaxLength - 1];
-
-
-            /*
+            
             try
             {
 
@@ -119,8 +126,8 @@ namespace dresslerAssign2
             }
 
             string lossesCtrInt = Convert.ToString(lossesCtr);
-            lossesTB.Text = lossesCtrInt;*/
-        }
+            lossesTB.Text = lossesCtrInt;
+        }*/
 
 
 

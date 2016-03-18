@@ -94,7 +94,6 @@
             this.guessesTB.Name = "guessesTB";
             this.guessesTB.Size = new System.Drawing.Size(209, 30);
             this.guessesTB.TabIndex = 4;
-            this.guessesTB.TextChanged += new System.EventHandler(this.guessesTB_TextChanged);
             this.guessesTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guessesTB_KeyPress);
             // 
             // newGameButton
