@@ -25,6 +25,8 @@ namespace dresslerAssign2
                               dresslerAssign2.Properties.Resources.hangman5,
                               dresslerAssign2.Properties.Resources.hangman6};
 
+        private List<char> guesses = new List<char>(); 
+
         
 
         public hangmanForm()
@@ -50,26 +52,38 @@ namespace dresslerAssign2
 
             //Code that generates a number for the array position to grab the value from
             Random randomNumberGenerator = new Random();
-            Int64 randNum = randomNumberGenerator.Next(words.Length);
+            int randNum = randomNumberGenerator.Next(words.Length); // jhallam: changed Int64 to int
             targetWord = words[randNum];
 
-            
-            
-            //Create hyphens
-            for (ctr = 0; ctr <= targetWord.Length; ctr++)
-            {
-                hyphens[ctr] = "-";
-                targetTB.Text += hyphens[ctr];
-                
-            }
+            // Create hyphens
+            targetTB.Text = new string('-', targetWord.Length);
 
-
-
+            // Clear previous guesses
+            guesses.Clear();
         }
+
+        private void guessesTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z'))
+            {
+                char input = e.KeyChar;
+                guesses.Add(input);
+
+
+            }
+        } 
 
         private void guessesTB_TextChanged(object sender, EventArgs e)
         {
+            // No user input (maybe a backspace)
+            if (guessesTB.Text.Length == 0)
+                return;
+            
 
+            char input = guessesTB.Text[guessesTB.MaxLength - 1];
+
+
+            /*
             try
             {
 
@@ -105,7 +119,7 @@ namespace dresslerAssign2
             }
 
             string lossesCtrInt = Convert.ToString(lossesCtr);
-            lossesTB.Text = lossesCtrInt;
+            lossesTB.Text = lossesCtrInt;*/
         }
 
 
